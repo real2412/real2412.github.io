@@ -1,0 +1,23 @@
+.baner{
+  background-color:#B10005;
+}
+.inicio{
+  font-family:Arial Black;
+  text-shadow:1px 1px gray;
+  font-color:#B10005;
+  
+  /*font-size:26px;  */
+  
+}
+
+footer{
+  padding:14px;
+  background:gray;
+  color:white;
+}
+
+.red{
+  font-size:46px;
+  background-color:#911224;
+  border-box:6px 6px;
+}
