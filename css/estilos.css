@@ -1,5 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo|Supermercado+One|Patua+One");
+
+body{
+	background:url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/brushed_alu.png");	
+	font-family:"Patua One";
+}
+
 .baner{
-  background-color:#B10005;
+  margin-top:50px;
+  
+  padding-top:60px;
+  padding-bottom:20px;
+  font-family:Baloo;
+  background:url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/dark_wood.png");
+  font-size:2em;
+  height:100%;
 }
 .inicio{
   font-family:Arial Black;
@@ -18,6 +32,11 @@ footer{
 
 .red{
   font-size:46px;
-  background-color:#911224;
+  background-color:black;
   border-box:6px 6px;
+}
+
+.portafolio{
+  padding:20px;
+  height:100%;
 }
