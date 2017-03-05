@@ -101,10 +101,10 @@
 	 <p data-height="250" data-theme-id="light" data-slug-hash="wgbVZV" data-default-tab="result" data-user="real2412" data-embed-version="2" data-pen-title="CALCULATOR PAPERA" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/real2412/pen/wgbVZV/">CALCULATOR PAPERA</a> by RaMsP (<a href="http://codepen.io/real2412">@real2412</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 	</div>	
 	<div class="col-xs-3">
-	<p data-height="250" data-theme-id="light" data-slug-hash="qRLPzj" data-default-tab="result" data-user="real2412" data-embed-version="2" data-pen-title="TWITCH USERS API" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/real2412/pen/qRLPzj/">TWITCH USERS API</a> by RaMsP (<a href="http://codepen.io/real2412">@real2412</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+	<a href="http://www.caja.unapiquitos.edu.pe" target="_blank"><img class="img-responsive" src="http://www.viajefluvial.com/img/sicarf.png" style="height:250px;"><p><i>Sistema Informatico Centralizado en la Gestion de Recursos Financieros</i></p></a>
 	</div>
 	<div class="col-xs-3">
-	 <p data-height="250" data-theme-id="light" data-slug-hash="wgbVZV" data-default-tab="result" data-user="real2412" data-embed-version="2" data-pen-title="CALCULATOR PAPERA" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/real2412/pen/wgbVZV/">CALCULATOR PAPERA</a> by RaMsP (<a href="http://codepen.io/real2412">@real2412</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+	<a href="http://www.viajefluvial.com" target="_blank"><img class="img-responsive" src="http://www.viajefluvial.com/img/viajefluvial.png" style="height:250px;"><p><i>Viaje Fluvial</i></p>
 	</div>	
   </div>
   <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -122,24 +122,49 @@
 		  <h2 class="text-center" id="contact">Contact me</h2>
 		</div>
 		<div class="col-xs-8">
-		  <form>
+	<form class="form-horizontal" method="post">
 	  <div class="form-group">
 		<label>Name</label>
-		<input type="text" class="form-control" id="name" placeholder="Name">
+		<input type="text" class="form-control" name="nombre" placeholder="Name">
 		<label>Email Address</label>
-		<input type="text" class="form-control" id="email" placeholder="Email Address">
-	  </div>
-	  <div class="form-group">
-		<label>Number Phone</label>
-		<input type="text" class="form-control" id="number" placeholder="Number Phone">
-	  </div>
+		<input type="text" class="form-control" name="email" placeholder="Email Address">
+	  </div>	  
 	  <div class="form-group">
 		<label>Message</label>
-		<textarea class="form-control" rows="3" name="message" placeholder="Message" ></textarea>
+		<textarea class="form-control" rows="3" name="cuerpo" placeholder="Message" ></textarea>
 	  </div>
 			
 	  <button type="submit" class="btn btn-default">Send</button>
 	</form>
+	
+	 <?php
+	if(isset($_POST["nombre"]) && isset($_POST["email"]) && isset($_POST["cuerpo"])){
+		$nombre=$_POST["nombre"];
+		$mail = $_POST["email"];
+		$cuerpo="nombre: ".$nombre."\r \n email:".$mail."\r \n mensaje: ".$_POST["cuerpo"];
+		
+		//Titulo
+		$titulo = "CONSULTA";
+		//cabecera
+		$headers = "MIME-Version: 1.0\r\n"; 
+		$headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+		//dirección del remitente 
+		$headers .= "From: ".$nombre." < desdelaweb@viajefluvial.com >\r\n";
+		//Enviamos el mensaje a tu_dirección_email 
+		$bool = mail("ramsp2412@gmail.com",$titulo,$cuerpo,$headers);
+		if($bool){
+			echo "<div class='alert alert-success' role='alert'>
+        <strong>Mensaje enviado!</strong> Resolveremos su consulta a la brevedad.
+      </div>";
+		}else{
+			echo "<div class='alert alert-danger' role='alert'>
+        <strong>Mensaje no enviado!</strong> Verifique la informacion que ingresada.
+      </div>";
+		}		
+	
+	}
+  ?>
+		
 		</div>
 		<div class="col-xs-4">
 		  <h4 class="text-center">
