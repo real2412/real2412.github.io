@@ -136,39 +136,12 @@
 			
 	  <button type="submit" class="btn btn-default">Send</button>
 	</form>
-	
-	 <?php
-	if(isset($_POST["nombre"]) && isset($_POST["email"]) && isset($_POST["cuerpo"])){
-		$nombre=$_POST["nombre"];
-		$mail = $_POST["email"];
-		$cuerpo="nombre: ".$nombre."\r \n email:".$mail."\r \n mensaje: ".$_POST["cuerpo"];
-		
-		//Titulo
-		$titulo = "CONSULTA";
-		//cabecera
-		$headers = "MIME-Version: 1.0\r\n"; 
-		$headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
-		//dirección del remitente 
-		$headers .= "From: ".$nombre." < desdelaweb@viajefluvial.com >\r\n";
-		//Enviamos el mensaje a tu_dirección_email 
-		$bool = mail("ramsp2412@gmail.com",$titulo,$cuerpo,$headers);
-		if($bool){
-			echo "<div class='alert alert-success' role='alert'>
-        <strong>Mensaje enviado!</strong> Resolveremos su consulta a la brevedad.
-      </div>";
-		}else{
-			echo "<div class='alert alert-danger' role='alert'>
-        <strong>Mensaje no enviado!</strong> Verifique la informacion que ingresada.
-      </div>";
-		}		
-	
-	}
-  ?>
 		
 		</div>
 		<div class="col-xs-4">
 		  <h4 class="text-center">
-	Feel free to ask any questions you have regarding me :)
+	Feel free to ask any questions you have regarding me :)<br>
+	My email: ramsp2412@gmail.com
 		  </h4>
 		</div>
 
