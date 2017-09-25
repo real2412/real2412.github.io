@@ -8,6 +8,7 @@
     <style type="text/css">
         body {
             margin: 0;
+	    background:black;
         }
     </style>
 </head>
@@ -16,21 +17,19 @@
 <script type="text/javascript">
 
 
-var game = new Phaser.Game(640, 360, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
+var game = new Phaser.Game(640, 360, Phaser.AUTO, 'kidrat', {init:init,  preload: preload, create: create, update: update, render: render });
 
+function init() {
+    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+    game.scale.pageAlignHorizontally = true;
+    game.scale.pageAlignVertically = true;
+    game.scale.setScreenSize(true);
+    game.scale.refresh();
+}
+	
 function preload() {
 
-game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-	
-	//botones
-	
-	//spritesheet for animations
-//    game.load.spritesheet('mario', 'assets/misc/mariospritesheet-small.png',50,50); // key, sourcefile, framesize x, framesize y
-	
-	/*game.load.spritesheet('button_saltar', 'assets/buttons/btn_saltar.png', 193, 71);
-	game.load.spritesheet('button_derecha', 'assets/buttons/btn_derecha.png', 112, 95);
-	game.load.spritesheet('button_izquierda', 'assets/buttons/btn_izquiera.png', 112, 95);*/
-	game.load.spritesheet('buttonvertical', 'assets/buttons/buttons-big/button-vertical.png',64,64);
+    game.load.spritesheet('buttonvertical', 'assets/buttons/buttons-big/button-vertical.png',64,64);
     game.load.spritesheet('buttonhorizontal', 'assets/buttons/buttons-big/button-horizontal.png',96,64);
     game.load.spritesheet('buttondiagonal', 'assets/buttons/buttons-big/button-diagonal.png',64,64);
     game.load.spritesheet('buttonfire', 'assets/buttons/buttons-big/button-round-a.png',96,96);
