@@ -1,0 +1,1 @@
+sprites_rat1.png.png 0 0, sprites_rat2.png.png 33 0, sprites_rat3.png.png 0 31, sprites_rat4.png.png 33 31.
