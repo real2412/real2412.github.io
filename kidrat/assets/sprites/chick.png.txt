@@ -1,1 +1,0 @@
-chick_01.png.png 0 2, chick_02.png.png 32 2, chick_03.png.png 48 1.
