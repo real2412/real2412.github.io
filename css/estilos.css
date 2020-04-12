@@ -3,11 +3,10 @@
 body{
 	background:url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/brushed_alu.png");	
 	font-family:"Patua One";
+  background: #031321;
 }
 
 .baner{
-  margin-top:50px;
-  
   padding-top:60px;
   padding-bottom:20px;
   font-family:Baloo;
@@ -39,4 +38,225 @@ footer{
 .portafolio{
   padding:20px;
   height:100%;
+  color: #fff;
+}
+
+/*Inicio Boton NEON*/
+
+a.neon{
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #2196f3;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+a.neon:hover{
+  color: #255784;
+  background: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  transition-delay: 1s;
+}
+a.neon span{
+  position: absolute;
+  display: block;
+}
+a.neon span:nth-child(1)  {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,#2196f3);
+}
+a.neon:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+a.neon span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,#2196f3);
+}
+a.neon:hover span:nth-child(3) {
+  left: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+a.neon span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,#2196f3);
+}
+a.neon:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+a.neon span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,#2196f3);
+}
+a.neon:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  min-height: 60px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  transition: all 0.2s linear;
+  background-color: teal;
+  font-family: 'Baloo','Arial'
+}
+
+.nav-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #337ab7;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.nav ul {
+  display: flex;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.nav li {
+}
+
+.nav a {
+  display: block;
+  padding: 5px 10px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.nav a:hover {
+  color: #212121;
+}
+
+
+.to-top-link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.principal{
+  height:100vh;
+  font-family: 'Patua One','Arial'
+}
+
+.principal .subprincipal{
+  margin-top:25%;
+  position: absolute;
+  text-align: center;
+}
+
+.principal .subprincipal h1{
+  color: white;
+}
+
+.subtitulo{
+  font-family: Patua One;
+  color:white;
+}
+
+.paragraph-desc{
+  font-size:1.3em;
+}
+
+.descripcion{
+  height: 80vh;
+}
+
+.description > div > div, img.img-thumbnail{
+  margin-top:60px;
+}
+
+
+
+/*Fin Boton NEOSN*/
+
+.tns-nav > [aria-controls] {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: #ddd;
+    border: 0;
+}
+
+.tns-nav > .tns-nav-active {
+    background: #999;
+}
+
+.tns-controls [aria-controls] {
+    font-size: 15px;
+    margin: 0 5px;
+    padding: 0 1em;
+    height: 2.5em;
+    color: #fff;
+    background: #337ab7;
+    border-radius: 3px;
+    border: 0;
+}
+
+.tns-controls {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.tns-nav {
+    text-align: center;
+    margin: 10px 0;
+}
+
+[data-action] {
+    display: block;
+    margin: 10px auto;
+    font-size: 17px;
+    min-width: 3em;
+    text-align: center;
+    background: transparent;
+    border: 0;
+    color:#fff;
+}
+
+[data-action] {
+    display: block;
+    margin: 10px auto;
+    font-size: 17px;
+    min-width: 3em;
+    text-align: center;
+    background: transparent;
+    border: 0;
 }
