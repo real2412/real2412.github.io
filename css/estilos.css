@@ -25,7 +25,6 @@ body{
 
 footer{
   padding:14px;
-  background:gray;
   color:white;
 }
 
@@ -84,7 +83,7 @@ a.neon span:nth-child(3) {
   background: linear-gradient(270deg,transparent,#2196f3);
 }
 a.neon:hover span:nth-child(3) {
-  left: 100%;
+  right: 100%;
   transition: 1s;
   transition-delay: 0.5s;
 }
@@ -136,6 +135,16 @@ a.neon:hover span:nth-child(4) {
   background-color: #337ab7;
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
   z-index: 999;
+}
+
+.nav-fixed .text-neon-sm{
+  //filter: blur(.0px);
+  //font-weight: 1px;
+  text-shadow: 0 0 2px rgba(255,255,255,1),
+              0 0 5px rgba(255,255,255,1),
+              0 0 10px rgba(255,255,255,1),
+              0 0 20px rgba(255,255,255,1),
+              0 0 40px rgba(255,255,255,1);
 }
 
 .nav ul {
@@ -240,7 +249,7 @@ a.neon:hover span:nth-child(4) {
     margin: 10px 0;
 }
 
-[data-action] {
+.text-neon[data-action] {
     display: block;
     margin: 10px auto;
     font-size: 17px;
@@ -251,12 +260,135 @@ a.neon:hover span:nth-child(4) {
     color:#fff;
 }
 
-[data-action] {
+.text-neon[data-action] {
     display: block;
     margin: 10px auto;
     font-size: 17px;
-    min-width: 3em;
+    min-width: 2.6em;
     text-align: center;
     background: transparent;
     border: 0;
+}
+
+.text-neon{
+  position: relative;
+  top:20%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  margin: 0;
+  padding: 0 20px;
+  font-size: 2.6em;
+  color: #fff;
+  text-shadow: 0 0 20px #2196f3; 
+}
+
+.text-neon:after{
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  z-index: -1;
+  color: #2196f3;
+  filter: blur(15px);
+}
+
+.text-neon:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #2196f3;
+  z-index: -2;
+  opacity: 0.5;
+  filter: blur(40px);
+}
+
+div.poligono{
+  background-color: #1f2e3c;
+  -webkit-clip-path: polygon(0 0%, 100% 4%, 100% 96%, 0% 100%);
+  clip-path: polygon(0 0%, 100% 4%, 100% 96%, 0% 100%);
+  padding: 65px 10px;
+}
+
+div.normal{
+  padding: 65px 10px;
+}
+
+div.logos{
+  display: flex;
+  margin-bottom: 20px;
+}
+div.logos div{
+  margin-left: 6px;
+}
+div.logos div.logoreact{ 
+  background: url('../kidrat/assets/logos/logoreact.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 40px;
+  width:80px;
+  margin-top: 20px
+}
+/*linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),*/
+div.logos div.logoredux{
+  background: url('../kidrat/assets/logos/logoredux.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 80px;
+  width: 130px;
+}
+div.logos div.logodjango{ 
+  background: url('../kidrat/assets/logos/logodjango.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 40px;
+  width:80px;
+  margin-top: 20px
+}
+div.logos div.logobootstrap{ 
+  background: url('../kidrat/assets/logos/logobootstrap.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 40px;
+  width:  40px;
+  margin-top: 20px
+}
+div.logos div.logopythonanywhere{ 
+  background: url('../kidrat/assets/logos/logopythonanywhere.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 40px;
+  width:140px;
+  text-shadow: 0 0 20px #2196f3;
+  margin-top: 20px;
+  -webkit-filter: invert(100%);
+ -moz-filter: invert(100%);
+ filter: invert(100%);
+}
+div.logos div.logojs{ 
+  background: url('../kidrat/assets/logos/logojs.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 40px;
+  width:  40px;
+  margin-top: 20px
+}
+div.logos div.logophaser{ 
+  background: url('../kidrat/assets/logos/logophaser.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 40px;
+  width:  40px;
+  margin-top: 20px
+}
+div.logos div.logobulma{ 
+  background: url('../kidrat/assets/logos/logobulma.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 40px;
+  width:80px;
+  margin-top: 20px;
 }

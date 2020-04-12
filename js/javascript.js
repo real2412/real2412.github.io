@@ -51,6 +51,27 @@ toTopLink.addEventListener('click', function(event) {
    window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+let mainNavLinks = document.querySelectorAll("nav ul li a");
+let mainSections = document.querySelectorAll("div.seccion");
+
+let lastId;
+let cur = [];
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach(link => {
+    let section = document.querySelector(link.hash);
+
+    if( section.offsetTop <= fromTop && 
+        section.offsetTop + section.offsetHeight > fromTop ){
+      link.classList.add("text-neon-sm");
+    }else{
+      link.classList.remove("text-neon-sm");
+    }
+  });
+});
+
 particlesJS("particles", {
   "particles": {
     "number": {
