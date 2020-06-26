@@ -153,6 +153,22 @@ a.neon:hover span:nth-child(4) {
   list-style: none;
 }
 
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+  
+  .nav ul {
+    padding-left: 0;
+  }
+
+  .nav a {
+    font-size: 1.6rem!important;
+  }
+
+}
+
 .nav li {
 }
 
@@ -391,4 +407,8 @@ div.logos div.logobulma{
   height: 40px;
   width:80px;
   margin-top: 20px;
+}
+
+.list-group-item {
+  word-break: break-all;
 }
