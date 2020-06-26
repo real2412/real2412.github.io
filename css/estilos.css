@@ -424,3 +424,19 @@ div.logos div.logobulma{
 .list-group-item {
   word-break: break-all;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #337ab7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::-webkit-scrollbar-track {
+  background: #CCCCCC;
+}
