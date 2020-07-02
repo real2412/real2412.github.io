@@ -360,6 +360,15 @@ div.logos div.logoreact{
   width:80px;
   margin-top: 20px
 }
+
+div.logos div.logoheroku{ 
+  background: url('../kidrat/assets/logos/logoheroku.png');
+  background-size: 110% 120%;
+  background-repeat: no-repeat;
+  height: 40px;
+  width:86px;
+  margin-top: 16px
+}
 /*linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),*/
 div.logos div.logoredux{
   background: url('../kidrat/assets/logos/logoredux.png');
@@ -379,6 +388,14 @@ div.logos div.logodjango{
 div.logos div.logobootstrap{ 
   background: url('../kidrat/assets/logos/logobootstrap.png');
   background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 40px;
+  width:  40px;
+  margin-top: 20px
+}
+div.logos div.logomaterialui{ 
+  background: url('../kidrat/assets/logos/logomaterialui.svg');
+  background-size: 120% 120%;
   background-repeat: no-repeat;
   height: 40px;
   width:  40px;
