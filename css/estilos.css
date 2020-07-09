@@ -385,8 +385,24 @@ div.logos div.logodjango{
   width:80px;
   margin-top: 20px
 }
+div.logos div.logofirebase{ 
+  background: url('../kidrat/assets/logos/logofirebase.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 40px;
+  width:80px;
+  margin-top: 20px
+}
 div.logos div.logobootstrap{ 
   background: url('../kidrat/assets/logos/logobootstrap.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 40px;
+  width:  40px;
+  margin-top: 20px
+}
+div.logos div.logoangular{ 
+  background: url('../kidrat/assets/logos/logoangular.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 40px;
