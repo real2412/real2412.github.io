@@ -401,6 +401,14 @@ div.logos div.logobootstrap{
   width:  40px;
   margin-top: 20px
 }
+div.logos div.logoreactnative{ 
+  background: url('../kidrat/assets/logos/logoreactnative.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 40px;
+  width:  40px;
+  margin-top: 20px
+}
 div.logos div.logoangular{ 
   background: url('../kidrat/assets/logos/logoangular.png');
   background-size: 100% 100%;
